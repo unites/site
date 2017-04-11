@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <title>Info</title>
+</head>
+<body>
+  <!-- Nav Bar -->
+  <div id="cnavbar"></div>
+  <!-- Page Container -->
+  <div class="container">
+    <h3>Frequently Trafficked</h3>
+    <h4>Web Development</h4>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">Mozilla HTML Docs</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" target="_blank">Mozilla CSS Docs</a></li>
+      <li><a href=" http://getbootstrap.com/css/#overview" target="_blank">Bootstrap CSS Docs</a></li>
+      <li><a href="https://api.jquery.com">jQuery Documentation</a></li>
+      <li><a href="https://docs.emmet.io/cheat-sheet/" target="_blank">Emmet Docs</a></li>
+    </ul>
+    <h4>Development Environment</h4>
+    <ul>
+      <li><a href="https://www.sublimetext.com/"target="_blank">Sublime Text</a></li>
+      <li><a href="http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_osx.html">Sublime Text Hot keys</a></li>
+      <li><a href="https://forum.sublimetext.com/" target="_blank">Sublime Forums</a></li>
+      <li><a href="https://www.sublimetext.com/docs/3/" target="_blank">Sublime Documentation</a></li>
+    </ul>
+  </div>
+  <script>
+    $.get("./nav.html", function(data){
+      $("#cnavbar").replaceWith(data);
+    });
+  </script>
+</body>
+</html>
