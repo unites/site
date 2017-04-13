@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/custom.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <title>Info</title>
+</head>
+<body>
+  <!-- Nav Bar -->
+  <div id="cnavbar"></div>
+  <!-- Page Container -->
+  <div class="container">
+    <h2>Development Tools and Notes</h2>
+    <h3>Sublime Tips</h3>
+      <p><a href="https://www.sublimetext.com/" class="Sublime Text Link">Sublime Text</a> is an awesome text editor. It has a vibrant community with a large library of useful and lightweight plug ins. For most of these you can substitute CTRL for CMD if you are using Windows. </p>
+      <h4>Word/Line Selection</h4>
+        To select a word, or once a word is selected to select others instances.
+        <pre><code>CMD+D</code></pre>
+        To select a line.
+        <pre><code>CMD+L</code></pre>
+        To select current scope.
+        <pre><code>CTRL+CMD+M</code></pre>
+      <h4>Sorting</h4>
+      Plain old <code> F5</code>.  Simple and effective.  Good to use with CSS.
+      <h4>Command Menu</h4>
+        Still learning everything sublime text can do here, if the package manager is installed you can access it via this tool.  You can   also change syntax highlighting options quickly from here.
+        <pre><code>CMD+SHIFT+P</code></pre>
+        Also useful is the fuzzy search using the below
+        <pre><code>CMD+P</code></pre>
+        You can also type <code>:</code> to jump to line numbers and <code>@</code> to jump to modules or functions in code.
+        Or you can get rid of the distraction
+        <pre><code>CMD+SHIFT+CTRL+F</code></pre>
+      <h4>Navigation</h4>
+        If you want to jump between tabs use
+        <pre><code>CMD+T</code></pre>
+        To navigate left/right through tabs
+        <pre><code>CMD+SHIFT+[</code></pre>
+        <pre><code>CMD+SHIFT+]</code></pre>
+        Find Window
+        <pre><code>CMD+SHIFT+F</code></pre>
+        Populate selected word into the find window.
+        <pre><code>CMD+E</code></pre>
+        REALLY HANDY, use this to navigate through modules/functions.  Useful especially with CSS.
+        <pre><code>CMD+R</code></pre>
+        Side by side docs
+        For Horizontal
+        <pre><code>CMD+ALT+2-4</code></pre>
+        For Vertical
+        <pre><code>CMD+SHIFT+ALT+2-4</code></pre>
+
+    <h3>Emmet Plug in for Sublime</h3>
+
+
+
+  </div>
+  <script>
+    $.get("./nav.html", function(data){
+      $("#cnavbar").replaceWith(data);
+    });
+  </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="assets/js/ie10-viewport-bug-workaround.js"></script> -->
+</body>
+</html>
