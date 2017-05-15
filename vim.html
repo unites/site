@@ -7,17 +7,55 @@
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap/css/custom.css" rel="stylesheet">
   <script src="http://code.jquery.com/jquery.min.js"></script>
-  <title>Unite System</title>
+  <title>Info</title>
 </head>
 <body>
   <!-- Nav Bar -->
   <div id="cnavbar"></div>
   <!-- Page Container -->
   <div class="container">
-  <img src="banner-n.jpg" alt="Banner Image" class="img-responsive img-rounded">
+    <h2>VIM</h2>
+    <h3>The vimrc file</h3>
+    <pre><code>
+    " Basic Setup
+    set nocompatible
+    syntax enable
+    filetype plugin on
+    set number
 
-  <h2>About</h2>
-  <p>Welcome!  This is my little corner of the Internet.  It serves as a reference source, blog, and general sandbox for learning.  I am not using a Content Management Systems (CMS), this site has been written by me using HTML/CSS/JS, ruby and the bootstrap framework (so not entirely from scratch).  End goal of this site is to better educate myself about Full Stack Web development, infosec, and systems administration.  I am here to learn so if you see something you think could be done better, a correction, or just some valuable info please share it with me: learn@unitesystem.com</p>
+    "Fuzzy search
+    "Allow traversal of directory (outside of current)
+    set path+=**
+    "cool menu for finding
+    set wildmenu
+
+    "Tag setup, code naviagtion via tags
+    command! MakeTags !ctags -R .
+
+    "Pathogen Package Manager
+    execute pathogen#infect()
+    "Solarized Settings
+    syntax enable
+    set background=dark
+    colorscheme solarized
+
+    "Centralize backups, swapfiles and undo history
+    set backupdir=~/.vim/backups
+    set directory=~/.vim/swaps
+    if exists("&undodir")
+    	set undodir=~/.vim/undo
+    endif
+    </code></pre>
+    <h3>Ctags</h3>
+    Generate tag file using <code>ctags -R .</code><br>
+    Navigate using:
+    <pre><code>
+    ^ + [ and ^ + ]
+    ^ + t</code></pre>
+    <h3>Block Highlighting</h3>
+    <pre><code>
+      ^ + ALT + V
+    </code></pre>
   </div>
   <script>
     $.get("./nav.html", function(data){
